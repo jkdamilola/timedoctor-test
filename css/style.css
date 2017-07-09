@@ -1,0 +1,58 @@
+div.contentList img {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px
+}
+div.contentList {
+  text-transform: capitalize;
+}
+
+nav, .navbar-fixed {
+    height: 52px !important;
+    line-height: 52px !important;
+}
+nav .brand-logo {
+    font-size: 1.6rem;
+}
+.tabs .tab a {
+    color: #1565c0 !important;
+}
+
+/* OVERWRITE COLLECTION &? MEDIA QUERIES */
+.collection .collection-item {
+  line-height: 1.2rem!important;
+}
+.noMargin, .noPadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.collection.noBorder {
+    border-top-color: #fff!important;
+    border-left-color: #fff!important;
+    border-right-color: #fff!important;
+}
+.collection a.collection-item .title {
+    font-size: 16px;
+    color: rgba(0,0,0,0.87);
+}
+
+.collection a.collection-item p {
+    color: rgba(0,0,0,0.71);
+}
+
+.authContent {
+    height: 130px;
+    position: relative;
+}
+
+.authContent .authBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+html {
+    font-size: 16px !important;
+}
