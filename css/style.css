@@ -41,6 +41,10 @@ nav .brand-logo {
     color: rgba(0,0,0,0.71);
 }
 
+.collection .collection-item.avatar .secondary-content {
+    top: 35%;
+}
+
 .authContent {
     height: 130px;
     position: relative;
