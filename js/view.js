@@ -40,25 +40,25 @@
 
 		},
 		initAuth: function () {
-			$('#navBtns').html(View.logoTemplate);
-			$('#content').html(View.authTemplate());
+			$('#navBtns').html(this.logoTemplate);
+			$('#content').html(this.authTemplate());
 			$('#authenticate').on('click', function () {
 				TimeDoctor.authenticate();
 			});
 		},
 		initLoader: function () {
-			$('#navBtns').html(View.navTemplate());
+			$('#navBtns').html(this.navTemplate());
 			$('#backBtn').hide();
 			$('#logoutBtn').on('click', function () {
 				TimeDoctor.logout(function () {
-					View.initAuth();
+					this.initAuth();
 				});
 			});
 
-			$('#content').html(View.loaderTemplate());
+			$('#content').html(this.loaderTemplate());
 		},
 		showUsers: function (data) {
-			$('#content').html(View.mainTemplate());
+			$('#content').html(this.mainTemplate());
 			$('#headerTxt').html('<h5>' + data.company.accounts[0].company_name + '</h5>');
 
 			var i, l,
@@ -66,7 +66,7 @@
 				users = data.users.users;
 
 			for (i = 0, l = users.length; i < l; i++) {
-				var template = View.itemTemplate();
+				var template = this.itemTemplate();
 
 				template = template.replace('{{icon}}', 'person');
 				template = template.replace('{{id}}', users[i].user_id);
@@ -94,7 +94,7 @@
 			});
 		},
 		showTasks: function (data) {
-			$('#content').html(View.mainTemplate());
+			$('#content').html(this.mainTemplate());
 			$('#backBtn').show();
 			$('#headerTxt').html('<h5>' + data.name + '\'s Task(s)</h5>');
 
@@ -103,7 +103,7 @@
 				tasks = data.tasks.tasks;
 
 			for (i = 0, l = tasks.length; i < l; i++) {
-				var template = View.itemTemplate(),
+				var template = this.itemTemplate(),
 					project_name = '';
 
 				if (tasks[i].project_id != 'null') {

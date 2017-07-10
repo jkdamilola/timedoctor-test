@@ -1,11 +1,13 @@
 (function() {
+	'use strict';
 	var items;
 	var Controller = {
 		init: function () {
+			var _this = this;
 			TimeDoctor.isLoggedIn(function(data) {
-				items = data
+				items = data;
 				if (items.access_token && !TimeDoctor.isExpired(items.expiry_date)) {
-					Controller.listUsers();
+					_this.listUsers();
 				} else {
 					View.initAuth();
 				}

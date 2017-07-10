@@ -1,6 +1,6 @@
 
 /**
- * Get tokens.
+ * Get tokens from session.
  */
 (function() {
   'use strict';
