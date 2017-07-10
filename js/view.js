@@ -47,11 +47,12 @@
 			});
 		},
 		initLoader: function () {
+			var _this = this;
 			$('#navBtns').html(this.navTemplate());
 			$('#backBtn').hide();
 			$('#logoutBtn').on('click', function () {
 				TimeDoctor.logout(function () {
-					this.initAuth();
+					_this.initAuth();
 				});
 			});
 
